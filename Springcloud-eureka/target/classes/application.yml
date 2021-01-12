@@ -1,0 +1,26 @@
+#端口
+server:
+  port: 7001
+eureka:
+  instance:
+    #显示ip地址
+    prefer-ip-address: true
+    #服务注册中心实列的主机名
+    hostname: localhost
+
+  server:
+    #关闭自我保护机制，防止失效的服务也被访问
+    enable-self-preservation: false
+    #该配置可以修改检查失效的服务器，每隔5s去扫描检查失效的服务  默认60s
+    eviction-interval-timer-in-ms: 10000
+  client:
+    #是否向服务注册中心注册自己
+    register-with-eureka: false
+    #是否监测服务
+    fetch-registry: false
+    #服务注册中心的配置内容，指定服务注册中心的位置
+    service-url:
+      #单机配置  就是访问注册中心的路径
+      defaultZone: http://localhost:7002/eureka/
+
+

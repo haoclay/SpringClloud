@@ -1,0 +1,20 @@
+server:
+  port: 8003
+#注册给注册中心  取名
+spring:
+  application:
+    #我们服务提供者是被消费者调用 ---》去注册中心找到提供者
+    name: springcloud-pay
+eureka:
+  instance:
+    #显示客服端的真实ip
+    prefer-ip-address: true
+    #eureka服务在接收到最后一个心跳等待的时间，然后才能把当前服务从列表中删除
+    lease-expiration-duration-in-seconds: 10
+    #客户端需要向服务器发送的频率
+    lease-renewal-interval-in-seconds: 1
+  client:
+    service-url:
+      #告诉服务提供者把要注册的服务注册到哪  7001为Eureka服务器端口
+     defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+

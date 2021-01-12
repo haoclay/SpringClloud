@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springcloud-crm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springcloud-dept" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springcloud-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springcloud-eureka/Springcloud-eureka2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springcloud-eureka2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springcloud-pay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springcloud-pay2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springcloud-pay3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springcloud-zuul" charset="UTF-8" />
+  </component>
+</project>
