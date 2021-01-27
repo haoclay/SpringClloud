@@ -23,3 +23,7 @@ feign:
   hystrix:
     enabled: true
     #支持开启熔断
+
+url :
+  user_student: http://127.0.0.1:8001
+

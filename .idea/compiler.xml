@@ -6,15 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Springcloud-crm" />
-        <module name="Springcloud-dept" />
-        <module name="Springcloud-eureka" />
-        <module name="Springcloud-eureka2" />
-        <module name="Springcloud-pay" />
-        <module name="Springcloud-pay2" />
         <module name="Springcloud-pay3" />
+        <module name="Springcloud-pay" />
+        <module name="Springcloud-eureka" />
         <module name="Springcloud-zuul" />
         <module name="tt" />
+        <module name="Springcloud-dept" />
+        <module name="Springcloud-eureka2" />
+        <module name="Springcloud-pay2" />
+        <module name="Springcloud-crm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

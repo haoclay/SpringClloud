@@ -1,8 +1,9 @@
 package com.softeem.controller;
 
-import com.softeem.feigninterface.IUserClient;
+import com.softeem.fengicai.ICwhClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -33,18 +34,25 @@ public class CrmController {
     }
 
     //feign 里面默认就是豪猪和ribbon
+
+//    @Autowired
+//    private IUserClient userClient;
     @Autowired
-    private IUserClient userClient;
+    private ICwhClient client;
 
     @RequestMapping("/findAll")
     public Object finduser(){
-        String s = userClient.finduser().toString();
+        String s = client.finduser().toString();
         return s;
     }
 
     @RequestMapping("/findTwo")
     public Object findOne(){
-        String s = userClient.findTwoPerson().toString();
+        String s = client.findTwoPerson().toString();
         return s;
+    }
+    @RequestMapping("/findStudentById.do")
+    public Object findStudentById(@RequestParam Integer id){
+       return  client.findById(id);
     }
 }

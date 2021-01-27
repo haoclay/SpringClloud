@@ -2,6 +2,7 @@ package com.softeem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
@@ -12,7 +13,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * @version: v1.0
  */
 
-@SpringBootApplication
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableEurekaServer//此注解表示该启动类是一个eureka注册中心启动类
 public class EurekaRun_7002 {
 

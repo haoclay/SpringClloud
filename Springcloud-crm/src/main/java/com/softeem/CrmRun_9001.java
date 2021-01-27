@@ -1,9 +1,12 @@
 package com.softeem;
 
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @program:SpringCloud
@@ -12,9 +15,11 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @create:2020/10/9 20:38
  * @version: v1.0
  */
-@SpringBootApplication
+@ComponentScan(basePackages = "com.softeem.*")
+@SpringBootApplication(exclude = {DruidDataSourceAutoConfigure.class,DataSourceAutoConfiguration.class})
 @EnableEurekaClient
-@EnableFeignClients(basePackages = "com.softeem.feigninterface")//去扫描服务提供者的feign接口
+//@EnableFeignClients(basePackages = "com.softeem.feigninterface")//去扫描服务提供者的feign接口
+@EnableFeignClients(basePackages = "com.softeem.fengicai")//去扫描服务提供者的feign接口
 public class CrmRun_9001 {
 
     public static void main(String[] args) {

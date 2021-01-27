@@ -2,6 +2,7 @@ package com.softeem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
@@ -11,7 +12,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @create:2020/10/8 22:00
  * @version: v1.0
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableEurekaClient//开启eureka客户端
 public class PayRun_8002 {
 

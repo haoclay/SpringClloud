@@ -3,7 +3,7 @@ package com.softeem.feigninterface.fallback;
 import com.softeem.feigninterface.IUserClient;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class UserClidentFallback implements IUserClient {
     @Override
     public Object finduser() {
